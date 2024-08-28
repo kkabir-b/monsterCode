@@ -39,7 +39,7 @@ def comp(data,a,b,item):
         return 0
 
 def main():
-    data = load_data('all_data')
+    data = load_data('all_data.txt')
     while len(data) > 1:
         kys = list(data.keys())
         fighter_1 = random.choice(kys)
