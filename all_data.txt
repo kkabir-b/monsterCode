@@ -1,6 +1,7 @@
 1,Aatxe,Basque,Spirit that takes the form of a bull.,9,17,16,13,12,8,22
 2,Abaasy,Yakuts,Demons that have teeth of iron.,24,21,15,16,26,14,5
 3,Abada,African,Small type of unicorn reported to live in the lands of the African Congo.,20,29,26,18,16,4,2
+4,Shunto,Japanese,Small type of Valorant player who lives in Alex's House.,-1,-1,-1,-1,100,10,100
 5,Abaia,Melanesia,Huge magical eel.,25,30,18,4,17,25,17
 6,Abarimon,Medieval Bestiaries,Savage humanoid with backward feet.,10,12,3,20,22,3,16
 7,Abura-sumashi,Japanese,Creature from a mountain pass in Kumamoto Prefecture.,17,20,6,8,11,9,0
