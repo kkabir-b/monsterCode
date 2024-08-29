@@ -38,7 +38,40 @@ def comp(data,a,b,item):
     else:
         return 0
 
-def main():
+def encylopedia(data):
+    finished = False
+    while not finished:
+        monst_id = input('Hello, please enter the monster who you are interested in!!!!! -> ')
+        not_done = False
+        try:
+            monst_id = int(monst_id)
+            if not(1<=monst_id<=895):
+                not_done = True
+        except:
+            print('Enter a valid id please')
+            not_done = True
+        while not_done:
+            monst_id = input('Hello, please enter the monster who you are interested in!!!!! -> ')
+            not_done = False
+            try:
+                monst_id = int(monst_id)
+                if not (1 <= monst_id <= 895):
+                    not_done = True
+            except:
+                print('Enter a valid id please')
+                not_done = True
+        attr = input('What attribute would you like to know about this monster(ps you can enter all to get all)?!!!! ->')
+        while attr not in ['all','name','location','desc','hp','rizz','mana','height','weight','orbital_speed','egg']:
+            attr = input('Enter valid input!!! -> ')
+        if attr != 'all':
+            print(f'The monsters {attr} is {get_info(data,monst_id,attr)}')
+        else:
+            for i in ['name','location','desc','hp','rizz','mana','height','weight','orbital_speed','egg']:
+                print(f'The monsters {i} is {get_info(data, monst_id, i)}')
+
+
+
+def comp_main():
     data = load_data('all_data.txt')
     while len(data) > 1:
         kys = list(data.keys())
@@ -50,6 +83,9 @@ def main():
         winner = comp(data,fighter_1,fighter_2,attr)
         name1 = get_info(data,fighter_1,"name")
         name2 = get_info(data,fighter_2,"name")
+        plot_armor = random.randint(1,100)
+        if plot_armor > 90:
+            winner = fighter_2 if winner == fighter_1 else fighter_1
         if winner == fighter_1:
             del data[fighter_2]
             x = f'{name1} won'
@@ -59,7 +95,11 @@ def main():
 
         else:
             x = 'it was a draw'
+        if plot_armor > 90:
+            x = x + ' because of plot armor'
         print(f'{name1} and {name2} fought in {attr} and {x}')
     print(f'The last one standing and the winner is {get_info(data,list(data.keys())[0],"name")}')
-
-main()
+data = load_data('all_data.txt'
+)
+comp_main()
+encylopedia(data)
